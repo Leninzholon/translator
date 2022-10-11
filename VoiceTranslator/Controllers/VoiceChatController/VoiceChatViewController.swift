@@ -384,6 +384,8 @@ extension VoiceChatViewController: SFSpeechRecognizerDelegate {
             case .notDetermined:
                 isButtonEnabled = false
                 print("Speech recognition not yet authorized")
+            @unknown default:
+                break
             }
             
             OperationQueue.main.addOperation() {

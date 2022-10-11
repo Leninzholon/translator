@@ -35,7 +35,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ouZ-hu-aGd">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="ouZ-hu-aGd">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cE5-rO-ZNW">
@@ -247,11 +247,6 @@
                             <constraint firstItem="YQ2-2y-OGV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="u1y-0h-MQa"/>
                             <constraint firstItem="YQ2-2y-OGV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="y0Q-s0-PYR"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="zYp-4g-eA9"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="alertView" destination="yql-8J-vVR" id="n1p-r7-6Wf"/>

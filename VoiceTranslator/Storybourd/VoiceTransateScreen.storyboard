@@ -118,7 +118,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nx5-sX-kSu">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="nx5-sX-kSu">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -404,11 +404,6 @@
                             <constraint firstAttribute="bottom" secondItem="0vS-v9-TUC" secondAttribute="bottom" id="xcW-Y4-Qwx"/>
                             <constraint firstItem="nKl-wl-Gfo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yaJ-Cw-7W2"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="0vS-v9-TUC"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="0vS-v9-TUC" id="iY7-PW-Jdt"/>

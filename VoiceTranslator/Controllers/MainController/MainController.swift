@@ -14,7 +14,8 @@ class MainController: UIViewController {
     
     //MARK: - Parameters
     
-    
+let reachability = try! Reachability()
+
     //menu point
     @IBOutlet weak var historyLabel: UILabel!
     @IBOutlet weak var rateUsLabel: UILabel!
@@ -49,9 +50,14 @@ class MainController: UIViewController {
     
     
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupObserverInternet()
         setTimerForLonch()
+
         makeBgForMenu()
         settingGestereOnMenu()
         setGesture()
@@ -59,15 +65,23 @@ class MainController: UIViewController {
         makeShadowForView()
         loadAds()
     }
+
     //MARK: - selector
+  
+
     // transitions menu
+
     @objc private func handlePanGesture(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: view)
+        let velocity = gesture.velocity(in: view)
         let x = translation.x
         
         switch gesture.state {
         case .changed:
             
+            print(x)
+            print(velocity)
+            print(isMenu)
             if self.menuchangeConstraint.constant < 0 {
                 self.menuchangeConstraint.constant = x - 300
                 self.view.layoutIfNeeded()
@@ -88,9 +102,18 @@ class MainController: UIViewController {
             else {
                 movingForMenu(whatIsPosition: false)
             }
+        case .possible:
+            break
+    case .began:
+            break
+    case .cancelled:
+            break
+    case .failed:
+            break
         @unknown default:
             break
         }
+        
     }
 
     @objc private func handleTapDismiss() {
@@ -138,6 +161,27 @@ class MainController: UIViewController {
         handleTransitionToPremium()
     }
     //MARK: - helpers funcs
+    fileprivate func setupObserverInternet() {
+        reachability.whenReachable = { reachability in
+            if reachability.connection == .wifi {
+                print("Reachable via wifi")
+            }else{
+                print("Reachable via cellular")
+            }
+            
+        }
+        reachability.whenUnreachable = { _ in
+            print("Not reachable")
+            self.showAlert()
+            
+        }
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("unable to start notifier")
+        }
+    }
+  
     fileprivate func loadAds() {
         bannerMenuView.rootViewController = self
         bannerMenuView.adUnitID = Constants.shared.openKey
@@ -150,8 +194,8 @@ class MainController: UIViewController {
     fileprivate func makeBgForMenu() {
         underMenu.isHidden = true
     }
-    fileprivate func setTimerForLonch() -> Timer {
-        return Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(handleHitenLounchView), userInfo: nil, repeats: false)
+    fileprivate func setTimerForLonch(){
+       Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(handleHitenLounchView), userInfo: nil, repeats: false)
     }
     fileprivate func makeShadowForView() {
         textTranslateView.makeShadow()

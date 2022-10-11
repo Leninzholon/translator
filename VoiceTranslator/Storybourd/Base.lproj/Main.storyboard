@@ -127,14 +127,14 @@
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ4-Yq-q0w">
                                                                         <rect key="frame" x="0.0" y="35" width="100" height="50.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="100" id="a0d-eH-rpY"/>
-                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="DJ4-Yq-q0w" firstAttribute="width" secondItem="dqx-V9-q2S" secondAttribute="height" multiplier="10:3" id="lLv-NO-ytj"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -163,14 +163,14 @@
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Chat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGH-Ul-ptJ">
                                                                         <rect key="frame" x="0.0" y="35" width="70" height="50.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="70" id="eM0-0k-G7y"/>
-                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="NGH-Ul-ptJ" firstAttribute="width" secondItem="mQF-Ak-Wl3" secondAttribute="height" multiplier="7:3" id="DyK-vY-ied"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -211,14 +211,14 @@
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-zR-YcU">
                                                                         <rect key="frame" x="0.0" y="35" width="100" height="50.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="100" id="d9r-90-wCq"/>
-                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="fDc-zR-YcU" firstAttribute="width" secondItem="sqG-Av-fKI" secondAttribute="height" multiplier="10:3" id="pT1-23-c4P"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -256,14 +256,14 @@
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-2J-OWc">
                                                                         <rect key="frame" x="0.0" y="35" width="100" height="50.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="100" id="R4F-TH-E1D"/>
-                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Ayg-2J-OWc" firstAttribute="width" secondItem="YWn-fk-fFo" secondAttribute="height" multiplier="10:3" id="FZv-R2-jL9"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -534,11 +534,6 @@
                                     <constraint firstItem="0RC-ka-fxf" firstAttribute="top" secondItem="WKN-sp-TRf" secondAttribute="bottom" constant="46" id="nQH-wn-YCi"/>
                                     <constraint firstItem="0RC-ka-fxf" firstAttribute="leading" secondItem="YgN-HM-GOk" secondAttribute="leading" id="zJ7-z0-iDQ"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="sbF-GB-nH9"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -567,11 +562,6 @@
                             <constraint firstItem="r0w-X3-Zpq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u0a-v2-BUM"/>
                             <constraint firstItem="XOq-pw-lCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-40" id="uAK-Q7-h2y"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="QLC-Vw-uoq"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="7Ho-JO-DKT"/>
                     <connections>
@@ -626,7 +616,7 @@
         <image name="fi-sr-camera" width="38" height="38"/>
         <image name="fi-sr-comment-alt" width="24" height="24"/>
         <image name="fi-sr-picture" width="30" height="30"/>
-        <image name="fi-sr-share" width="22" height="22"/>
+        <image name="fi-sr-share" width="20" height="20"/>
         <image name="fi-sr-star" width="24" height="24"/>
         <image name="fi-sr-text" width="30" height="30"/>
         <image name="fi-sr-time-quarter-to" width="24" height="24"/>

@@ -85,7 +85,6 @@ class TextTranslateController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         //MARK: - cell collection view
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -100,6 +99,8 @@ class TextTranslateController: UIViewController {
         tableView.register(CountryCell.nib(), forCellReuseIdentifier: CountryCell.identifier)
         setupUI()
     }
+  
+  
 
 
     //MARK: - action func
@@ -307,6 +308,8 @@ extension TextTranslateController : SFSpeechRecognizerDelegate {
             case .notDetermined:
                 isButtonEnabled = false
                 print("Speech recognition not yet authorized")
+            @unknown default:
+                break
             }
         }
     }
@@ -423,7 +426,7 @@ extension TextTranslateController: EnterTextFieldProtocol {
                     self.collectionView.reloadData()
                 }
             case .failure(let error):
-                print("Error: \(error)")
+                print("Error: \(error.localizedDescription)")
             }
         }
     }

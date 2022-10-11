@@ -30,7 +30,10 @@ class HistoryController: UIViewController {
         loadData()
         setingGesture()
         setingForSwicher()
-        loadAds() 
+        loadAds()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        print("DEBAG: ", historyArray)
     }
     //MARK: - action
     @IBAction func mainTrushTapped(_ sender: Any) {
