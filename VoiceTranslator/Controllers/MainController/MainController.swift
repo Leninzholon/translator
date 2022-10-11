@@ -51,7 +51,7 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        setTimerForLonch()
+        setTimerForLonch()
         makeBgForMenu()
         settingGestereOnMenu()
         setGesture()
@@ -63,15 +63,11 @@ class MainController: UIViewController {
     // transitions menu
     @objc private func handlePanGesture(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: view)
-        let velocity = gesture.velocity(in: view)
-        var x = translation.x
+        let x = translation.x
         
         switch gesture.state {
         case .changed:
             
-            print(x)
-            print(velocity)
-            print(isMenu)
             if self.menuchangeConstraint.constant < 0 {
                 self.menuchangeConstraint.constant = x - 300
                 self.view.layoutIfNeeded()

@@ -113,7 +113,7 @@
                                     <constraint firstAttribute="height" constant="70" id="25v-2C-qnm"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EWl-7s-aix">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EWl-7s-aix">
                                 <rect key="frame" x="0.0" y="112" width="414" height="714"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q3e-bE-LnM">
@@ -166,11 +166,6 @@
                             <constraint firstItem="gtI-ng-fZS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="r0b-pQ-c4U"/>
                             <constraint firstItem="EWl-7s-aix" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xnd-jT-bCl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="s8t-nz-tbr"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="s8t-nz-tbr" id="WFb-3a-qKn"/>

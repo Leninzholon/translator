@@ -570,7 +570,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QLC-Vw-uoq"/>
-                                <exclude reference="r0w-X3-Zpq"/>
                             </mask>
                         </variation>
                     </view>
@@ -627,7 +626,7 @@
         <image name="fi-sr-camera" width="38" height="38"/>
         <image name="fi-sr-comment-alt" width="24" height="24"/>
         <image name="fi-sr-picture" width="30" height="30"/>
-        <image name="fi-sr-share" width="20" height="20"/>
+        <image name="fi-sr-share" width="22" height="22"/>
         <image name="fi-sr-star" width="24" height="24"/>
         <image name="fi-sr-text" width="30" height="30"/>
         <image name="fi-sr-time-quarter-to" width="24" height="24"/>
